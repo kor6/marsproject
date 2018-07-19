@@ -1,0 +1,138 @@
+.header {
+  background-color: $color-grey-dark-1;
+  grid-column: full-start / col-end 6;
+  background-image: linear-gradient(
+      rgba($color-secondary, 0.43),
+      rgba($color-secondary, 0.43)
+    ),
+    url(../img/spaceman.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 8rem;
+  padding-top: 4rem;
+
+  display: grid;
+  grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
+  grid-template-columns: minmax(min-content, max-content);
+  grid-row-gap: 1.5rem;
+  justify-content: center;
+
+  @media only screen and (max-width: $bp-medium) {
+    grid-column: 1 / -1;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 5rem;
+  }
+
+  &__logo {
+    height: 16rem;
+    justify-self: center;
+    animation: float 6s ease-in-out infinite;
+    filter: brightness(2);
+  }
+
+  &__btn {
+    align-self: center;
+    justify-self: start;
+    
+  }
+
+}
+
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-20px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+}
+
+
+/*
+@keyframes button--glitch-anim-1 {
+  0% {
+    clip: rect(54px, 100px, 6px, 0);
+  }
+  6.66667% {
+    clip: rect(71px, 100px, 43px, 0);
+  }
+  13.33333% {
+    clip: rect(18px, 100px, 66px, 0);
+  }
+  20% {
+    clip: rect(59px, 100px, 41px, 0);
+  }
+  26.66667% {
+    clip: rect(71px, 100px, 79px, 0);
+  }
+  33.33333% {
+    clip: rect(7px, 100px, 37px, 0);
+  }
+  40% {
+    clip: rect(64px, 100px, 55px, 0);
+  }
+  46.66667% {
+    clip: rect(15px, 100px, 27px, 0);
+  }
+  53.33333% {
+    clip: rect(84px, 100px, 55px, 0);
+  }
+  60% {
+    clip: rect(62px, 100px, 28px, 0);
+  }
+  66.66667% {
+    clip: rect(11px, 100px, 39px, 0);
+  }
+  73.33333% {
+    clip: rect(45px, 100px, 96px, 0);
+  }
+  80% {
+    clip: rect(81px, 100px, 12px, 0);
+  }
+  86.66667% {
+    clip: rect(76px, 100px, 63px, 0);
+  }
+  93.33333% {
+    clip: rect(87px, 100px, 41px, 0);
+  }
+  100% {
+    clip: rect(54px, 100px, 95px, 0);
+  }
+}
+
+
+@keyframes pulse {
+  0% {
+      transform: scale(1)
+  }
+  50% {
+      transform: scale(1.1)
+  }
+  100% {
+      transform: scale(1)
+  }
+}
+
+
+
+
+@keyframes flash {
+  0%,
+  50%,
+  100% {
+      opacity: 1
+  }
+  25%,
+  75% {
+      opacity: 0
+  }
+}
+*/

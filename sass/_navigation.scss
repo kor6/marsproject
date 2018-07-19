@@ -1,0 +1,65 @@
+
+.o1{
+  display: none;
+  width: 0;
+}
+.overlay{
+  
+  height:95vh;
+  width:100vw;
+  position: absolute;
+  z-index: 5000;
+  left: 0;
+  top: 0;
+  background: linear-gradient(90deg,$color-primary 0%, $color-primary 50%,$color-secondary 50% );
+  overflow-x: hidden;
+  transition: all .5s ease-in;
+  animation: fadeIn 1s ease;
+  opacity: .9;
+  &__content{
+    position: relative;
+    
+    top: 10%;
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+
+  & a {
+    text-decoration:none;
+    padding: 3rem;
+    font-size: 3rem;
+    font-weight: bold;
+    display: block;
+    
+    text-transform: uppercase;
+    color: $color-grey-light-1;
+    letter-spacing: 1rem;
+    transition: .3s;
+  }
+  & .close-btn{
+    position: absolute;
+    top: 2rem;
+    right: 4.5rem;
+    font-size: 60;
+  }
+
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0
+  }
+  100% {
+      opacity: 1
+  }
+}
+@keyframes fadeOut {
+  0% {
+      opacity: 1
+  }
+  100% {
+      opacity: 0
+  }
+}

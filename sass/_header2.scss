@@ -1,0 +1,192 @@
+.header2 {
+  background-color: $color-grey-dark-1;
+  grid-column: full-start / full-end;
+  background-image: url(../img/starfield.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 8rem;
+  padding-top: 4rem;
+
+  display: grid;
+ 
+  justify-content: start;
+
+  @media only screen and (max-width: $bp-medium) {
+    grid-column: 1 / -1;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 5rem;
+  }
+
+  &__logo2 {
+    height: 10rem;
+    justify-self: end;
+    animation: shake 4s cubic-bezier(0.88, 1.35, 0.65, -0.15) infinite;
+    filter: brightness(2);
+    position: absolute;
+    top: 6rem;
+    right: 5rem;
+    z-index: 2000;
+  }
+
+  &__r1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+
+  &__btn {
+    justify-self: start;
+    z-index: 1000;
+  }
+
+}
+
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-8rem);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+}
+
+.particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+#particles-js {
+  object-fit: cover;
+  display: block;
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem;
+  width: 100%;
+}
+
+@keyframes shake {
+  0% {
+    -webkit-transform: translate(2px, 1px) rotate(0deg);
+  }
+  10% {
+    -webkit-transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    -webkit-transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    -webkit-transform: translate(0px, 2px) rotate(0deg);
+  }
+  40% {
+    -webkit-transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    -webkit-transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    -webkit-transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    -webkit-transform: translate(2px, 1px) rotate(-1deg);
+  }
+  80% {
+    -webkit-transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    -webkit-transform: translate(2px, 2px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+/*
+@keyframes button--glitch-anim {
+  0% {
+    clip: rect(54px, 100px, 6px, 0);
+  }
+  6.66667% {
+    clip: rect(71px, 100px, 43px, 0);
+  }
+  13.33333% {
+    clip: rect(18px, 100px, 66px, 0);
+  }
+  20% {
+    clip: rect(59px, 100px, 41px, 0);
+  }
+  26.66667% {
+    clip: rect(71px, 100px, 79px, 0);
+  }
+  33.33333% {
+    clip: rect(7px, 100px, 37px, 0);
+  }
+  40% {
+    clip: rect(64px, 100px, 55px, 0);
+  }
+  46.66667% {
+    clip: rect(15px, 100px, 27px, 0);
+  }
+  53.33333% {
+    clip: rect(84px, 100px, 55px, 0);
+  }
+  60% {
+    clip: rect(62px, 100px, 28px, 0);
+  }
+  66.66667% {
+    clip: rect(11px, 100px, 39px, 0);
+  }
+  73.33333% {
+    clip: rect(45px, 100px, 96px, 0);
+  }
+  80% {
+    clip: rect(81px, 100px, 12px, 0);
+  }
+  86.66667% {
+    clip: rect(76px, 100px, 63px, 0);
+  }
+  93.33333% {
+    clip: rect(87px, 100px, 41px, 0);
+  }
+  100% {
+    clip: rect(54px, 100px, 95px, 0);
+  }
+}
+
+
+@keyframes pulse {
+  0% {
+      transform: scale(1)
+  }
+  50% {
+      transform: scale(1.1)
+  }
+  100% {
+      transform: scale(1)
+  }
+}
+
+
+
+animation: flash 5s linear infinite;
+@keyframes flash {
+  0%,
+  50%,
+  100% {
+      opacity: 1
+  }
+  25%,
+  75% {
+      opacity: 0
+  }
+}
+*/

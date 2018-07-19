@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="tablaApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Science fan page">
+    <meta name="keywords" content="planets,nice photos,some video">
+    <meta name="author" content="FDK">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image/png" sizes="152x152" href="img/spaceship.svg">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+
+    <title>Mars &#8734; Discover Science</title>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="overlay o1" id="myNav">
+            <a href="#" class="close-btn" id="close-btn">&times;</a>
+            <div class="overlay__content">
+                <a href="#" id="table">Table of Planets</a>
+                <a href="#" id="videos">Video</a>
+                <a href="#" id="gal2">Gallery2</a>
+                <a href="#" id="gal3">Gallery3</a>
+                <a href="index.html" id="gal">Home</a>
+            </div>
+        </div>
+        <div class="sidebar">
+            <button class="nav-btn"></button>
+        </div>
+
+        <header class="header2">
+            <div class="particles">
+                <div id="particles-js"></div>
+            </div>
+            <img src="img/black-hole.png" alt="logo" class="header2__logo2">
+            <div class="header2__r1">
+                <h3 class="heading-3"></h3>
+                <h1 class="heading-1 mb-lg ft-o"> | 1000 forms of Matter</h1>
+                <h1 class="heading-1 ft-o"> Learn more about Astrophysics and Astronomy</h1>
+                <button class="btn header2__btn mt-lg br-sm" style="align-self:flex-start" onclick="location.href = 'https://www.thoughtco.com/astronomy-101-3071080';">Go read!</button>
+            </div>
+        </header>
+
+        <section class="features2 mb-sm" ng-controller="tablaCtrl as ctrl">
+            <div class="feature2">
+                <table class="feature2__table">
+                    <caption>Planets of the Solar System</caption>
+                    <thead>
+                        <tr>
+                            <th>Planets</th>
+                            <th>Distance from Sun</th>
+                            <th>Speed in Orbiting Sun</th>
+                            <th>Diameter </th>
+                            <th>Length of year:</th>
+                            <th>Length of day:</th>
+                            <th>Gravity:</th>
+                            <th>Temperature:</th>
+                            <th>Atmosphere</th>
+                            <th>Number of Moons</th>
+                        </tr>
+                    </thead>
+                    <tr ng-repeat="data in adatok">
+                        <td>{{data.Planet | uppercase}}</td>
+                        <td>{{data.DistancefromSun}}</td>
+                        <td>{{data.SpeedinOrbitingSun }}</td>
+                        <td>{{data.Diameter}}</td>
+                        <td>{{data.Lengthofyear}}</td>
+                        <td>{{data.LengthofDay}}</td>
+                        <td>{{data.Gravity}}</td>
+                        <td>{{data.Temperature}}</td>
+                        <td>{{data.Atmosphere}}</td>
+                        <td>{{data.NumberofMoons}}</td>
+
+
+                    </tr>
+                </table>
+            </div>
+
+
+        </section>
+
+        <div class="story__pictures">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/CBrsWPCp_rs?rel=0" frameborder="0" allow="autoplay; encrypted-media"
+                allowfullscreen></iframe>
+        </div>
+        <div class="story__content">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/EtsXgODHMWk?rel=0" frameborder="0" allow="autoplay; encrypted-media"
+                allowfullscreen></iframe>
+
+        </div>
+
+        <div class="story3__form">
+            <h2>What are the names of the moons of Mars?</h2>
+            <form name="f1">
+                <table>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" name="input1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" name="input2">
+                        </td>
+                    </tr>
+
+                </table>
+                <button onclick="ell(); if(ok) alert('Congratulation!')">Check</button>
+                <button type="button" id="ansg">Answer</button>
+            </form>
+
+        </div>
+
+
+        <section class="gallery2">
+
+            <figure class="gallery2__item gallery2__item--1">
+                <img src="img/MarsGallery/ccamera.jpg" alt="mars_gallery" class="gallery2__img">
+            </figure>
+            <figure class="gallery2__item gallery2__item--2">
+                <img src="img/MarsGallery/sunset.gif" alt="mars_gallery" class="gallery2__img">
+            </figure>
+            <figure class="gallery2__item gallery2__item--3">
+                <img src="img/MarsGallery/solarSystem.gif" alt="nasa_4507" class="gallery2__img">
+            </figure>
+            <figure class="gallery2__item gallery2__item--4">
+                <img src="img/MarsGallery/rocks.jpg" alt="mars_gallery" class="gallery2__img">
+            </figure>
+            <figure class="gallery2__item gallery2__item--5">
+                <img src="img/MarsGallery/earthfmars.jpg" alt="mars_gallery" class="gallery2__img">
+            </figure>
+            <figure class="gallery2__item gallery2__item--6">
+                <img src="img/MarsGallery/windMars.jpg" alt="mars_gallery" class="gallery2__img">
+            </figure>
+            <figure class="gallery2__item gallery2__item--7">
+                <img src="img/MarsGallery/curiosityportrait.jpg" alt="mars_gallery" class="gallery2__img">
+            </figure>
+            <figure class="gallery2__item gallery2__item--8">
+                <img src="img/MarsGallery/krupaccrater.jpg" alt="mars_gallery" class="gallery2__img">
+            </figure>
+            <figure class="gallery2__item gallery2__item--9">
+                <img src="img/MarsGallery/windMars2.jpg" alt="mars_gallery" class="gallery2__img">
+            </figure>
+
+        </section>
+
+        <section class="gallery3">
+            <figure class="gallery3__item gallery3__item--1">
+                <img src="img/MarsGallery/palebluedot.jpg" alt="favourite of all time" class="gallery3__img">
+            </figure>
+            <figure class="gallery3__item gallery3__item--2">
+                <img src="img/MarsMissions/blackhole.jpg" alt="blackhole" class="gallery3__img">
+            </figure>
+            <figure class="gallery3__item gallery3__item--3">
+                <img src="img/MarsMissions/spaceman.png" alt="spaceman" class="gallery3__img">
+            </figure>
+        </section>
+
+
+        <footer class="footer">
+            <ul class="nav">
+                <li class="nav__item">
+                    <a href="https://scienceandtechnology.jpl.nasa.gov/research#/" class="nav__link">Nasa JPL</a>
+                </li>
+                <li class="nav__item">
+                    <a href="https://www.space.com/" class="nav__link">Space.com</a>
+                </li>
+                <li class="nav__item">
+                    <a href="http://www.planetary.org/explore/space-topics/earth/pale-blue-dot.html" class="nav__link">&uarr;  Pale Blue Dot Photo  &uarr;</a>
+                </li>
+                <li class="nav__item">
+                    <a href="https://www.youtube.com/watch?v=RtU_mdL2vBM" class="nav__link">ISS Live Broadcast</a>
+                </li>
+                <li class="nav__item">
+                    <a href="http://carlsaganinstitute.org/" class="nav__link">Carl Sagan &hearts; </a>
+                </li>
+                <li class="nav__item">
+                    <a href="https://voyager.jpl.nasa.gov/mission/status/" class="nav__link">Voyager Status</a>
+                </li>
+            </ul>
+            <p class="copyright">
+                &copy; Copyright 2018 by Friedrich Dóra.
+            </p>
+        </footer>
+    </div>
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="js/particles.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
+
+<!--Forrasok
+    
+https://www.space.com/17135-life-on-mars.html
+https://mars.nasa.gov/
+https://solarsystem.nasa.gov/planets/mars/overview/
+https://mars.nasa.gov/insight/
+https://mars.nasa.gov/programmissions/missions/future/mars2020/
+https://mars.nasa.gov/programmissions/missions/present/2003/
+http://earthsky.org/space/images-curiosity-mars-mt-sharp-thomas-appere-mar-2018
+https://www.scientificamerican.com/article/if-we-found-life-on-mars-how-would-we-know/
+https://www.express.co.uk/news/science/900871/life-on-mars-nasa-scientist-red-planet-life-curiosity-rover-fossil
+https://www.telegraph.co.uk/science/2018/02/26/life-mars-possible-scientists-find-bacteria-flourishing-driest/
+https://voyager.jpl.nasa.gov/mission/status/
+https://www.esa.int/ESA
+https://www.youtube.com/watch?v=RtU_mdL2vBM
+https://www.space.com/science-astronomy
+https://www.space.com/
+https://scienceandtechnology.jpl.nasa.gov/research#/
+https://mars.nasa.gov/programmissions/missions/present/2003/
+https://mars.nasa.gov/programmissions/missions/future/mars2020/
+http://exploration.esa.int/mars/59184-schiaparelli-landing-investigation-completed/
+http://exploration.esa.int/mars/46048-programme-overview/
+https://mars.nasa.gov/insight/
+https://mars.jpl.nasa.gov/msl/
+https://www.youtube.com/watch?v=aQRuTm280KQ
+https://www.youtube.com/watch?v=p-MNSLsjjdo
+https://www.youtube.com/embed/CBrsWPCp_rs?rel=0
+https://www.youtube.com/embed/EtsXgODHMWk?rel=0
+
+
+
+kepek:
+https://www.nasa.gov/mission_pages/mars/images/index.html
+https://giphy.com/
+https://www.flickr.com/photos/thomasappere/with/26205871868/
+
+ikonok:
+https://www.flaticon.com/authors/vitaly-gorbachev
+
+
+Segitseg:
+Jonas Schmedtmann,
+Friedrich Thomas
+
+-->

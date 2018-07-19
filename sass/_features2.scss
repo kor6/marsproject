@@ -1,0 +1,107 @@
+.features2 {
+  grid-column: full-start / full-end;
+  margin-top: 10rem;
+
+  @supports (display: grid) {
+    display: grid;
+    //grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 6rem;
+    align-items: start;
+  }
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 20%;
+  }
+  @media only screen and (max-width: $bp-small) {
+    border-collapse: collapse;
+    display:block;
+    width: 30%;
+  }
+}
+
+.feature2 {
+  float: left;
+  width: 33.3333%;
+  margin-bottom: 0;
+
+  @media only screen and (max-width: $bp-small) {
+    font-size: 20%;
+  }
+
+  @supports (display: grid) {
+    width: auto;
+    margin-bottom: 0;
+  }
+
+  overflow: hidden;
+  &__table caption {
+    font-size: 5rem;
+    font-weight: bold;
+  }
+  &__table tr td {
+    background-color: $color-secondary;
+    opacity: 0.8;
+  }
+  &__table tr:hover {
+    background-color: $color-grey-light-2;
+  }
+  &__table th {
+    font-size: 2rem;
+  }
+
+  &__table tr td:nth-child(1) {
+    font-size: 2rem;
+    padding: 1rem;
+    font-weight: bold;
+  }
+
+  &__table tr td:nth-child(2) {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+
+  &__table tr td:nth-child(3) {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+
+  &__table tr td:nth-child(4) {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+
+  &__table tr td:nth-child(5) {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+
+  &__table tr td:nth-child(6) {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+
+  &__table tr td:nth-child(7) {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+
+  &__table tr td:nth-child(8) {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+
+  &__table tr td:nth-child(9) {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+
+  &__table tr td:nth-child(10) {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+
+  &__table tr td:nth-child(11) {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+}
